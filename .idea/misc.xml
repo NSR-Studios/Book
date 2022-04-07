@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/azx20/AndroidStudioProjects/Book/app/src/main/res/drawable-v24/ic_baseline_add_box_24.xml" value="0.1" />
+        <entry key="..\:/Users/azx20/AndroidStudioProjects/Book/app/src/main/res/drawable-v24/ic_baseline_home_24.xml" value="0.1" />
+        <entry key="..\:/Users/azx20/AndroidStudioProjects/Book/app/src/main/res/drawable-v24/ic_baseline_person_24.xml" value="0.1" />
+        <entry key="..\:/Users/azx20/AndroidStudioProjects/Book/app/src/main/res/drawable-v24/ic_baseline_photo_camera_24.xml" value="0.1" />
+        <entry key="..\:/Users/azx20/AndroidStudioProjects/Book/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/azx20/AndroidStudioProjects/Book/app/src/main/res/layout/fragment_compose.xml" value="0.1" />
+        <entry key="..\:/Users/azx20/AndroidStudioProjects/Book/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Users/azx20/AndroidStudioProjects/Book/app/src/main/res/layout/item_post.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/azx20/AndroidStudioProjects/Book/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.1" />
         <entry key="..\:/Users/elzib/AndroidStudioProjects/Book/app/src/main/res/drawable/et_style.xml" value="0.396" />
         <entry key="..\:/Users/elzib/AndroidStudioProjects/Book/app/src/main/res/drawable/roundbutton.xml" value="0.396" />
         <entry key="..\:/Users/elzib/AndroidStudioProjects/Book/app/src/main/res/layout/activity_login.xml" value="0.5541666666666667" />

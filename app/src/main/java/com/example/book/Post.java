@@ -17,6 +17,7 @@ public class Post extends ParseObject {
     public static final String KEY_BACK_IMAGE = "BackCover";
     public static final String KEY_USER = "user";
     public static final String KEY_CREATED_KEY = "createdAt";
+    public static final String KEY_IMAGE = "ProfilePic";
 
     public String getISBN() {
         return getString(BOOK_NUMBER);
@@ -34,6 +35,11 @@ public class Post extends ParseObject {
         put(CONDITION,description);
     }
 
+    public ParseFile getFrontImage()
+    {
+        return getParseFile(KEY_FRONT_IMAGE);
+    }
+
     public String getPrice() {
         return getString(PRICE);
     }
@@ -46,6 +52,16 @@ public class Post extends ParseObject {
 
     public void setBackImage(ParseFile parseFile){
         put(KEY_BACK_IMAGE,parseFile);
+    }
+
+    public ParseFile getImage()
+    {
+        return getParseFile(KEY_IMAGE);
+    }
+
+    public void setImage(ParseFile parseFile)
+    {
+        put(KEY_IMAGE,parseFile);
     }
 
     public ParseUser getUser(){
