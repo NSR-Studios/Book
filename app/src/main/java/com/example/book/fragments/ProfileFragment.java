@@ -78,9 +78,9 @@ public class ProfileFragment extends Fragment {
         profilePic = view.findViewById(R.id.profile_pic);
         // If there is already a profile pic, load it, else load the default
         if (image != null)
-            Glide.with(getContext()).load(image.getUrl()).circleCrop().into(profilePic);
+            Glide.with(getContext()).load(image.getUrl()).circleCrop().placeholder(R.drawable.blank).into(profilePic);
         else
-            profilePic.setImageResource(R.drawable.ic_baseline_photo_camera_24);
+            profilePic.setImageResource(R.drawable.blank);
 
         // If we click on the profile picture, take a new picture and assign it to photoFile
         profilePic.setOnClickListener(new View.OnClickListener() {

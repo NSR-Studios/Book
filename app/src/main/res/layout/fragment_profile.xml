@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,38 +9,76 @@
 
     <TextView
         android:id="@+id/profile_username"
-        android:layout_width="wrap_content"
+        android:layout_width="99dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_gravity="center"
-        android:fontFamily="sans-serif-black" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        tools:text="Username" />
 
     <ImageView
         android:id="@+id/profile_pic"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="51dp"
         app:srcCompat="@drawable/ic_baseline_photo_camera_24" />
 
     <TextView
         android:id="@+id/profile_major"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_gravity="center"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="86dp"
+        android:layout_toEndOf="@+id/profile_pic"
         android:fontFamily="sans-serif-black"
+        android:textColor="#FFFFFF"
         tools:text="Major: Computer Science" />
 
     <TextView
         android:id="@+id/profile_classOf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_gravity="center"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="118dp"
+        android:layout_toEndOf="@+id/profile_pic"
         android:fontFamily="sans-serif-black"
+        android:textColor="#FFFFFF"
         tools:text="Class: '22 CS 113" />
+
+    <TextView
+        android:id="@+id/profile_classOf2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="54dp"
+        android:layout_toEndOf="@+id/profile_pic"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFFFFF"
+        tools:text="Name" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeContainer2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="209dp"
         android:layout_weight="1">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -50,4 +88,4 @@
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-</LinearLayout>
+</RelativeLayout>

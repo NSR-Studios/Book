@@ -20,6 +20,12 @@
         <entry key="..\:/Users/elzib/AndroidStudioProjects/Book/app/src/main/res/xml/fileprovider.xml" value="0.31354166666666666" />
         <entry key="..\:/Users/sapan/Downloads/Book/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sapan/Downloads/Book/app/src/main/res/layout/activity_main.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/sapan/Downloads/Book/app/src/main/res/layout/fragment_compose.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/sapan/Downloads/Book/app/src/main/res/layout/fragment_posts.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/sapan/Downloads/Book/app/src/main/res/layout/fragment_profile.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/sapan/Downloads/Book/app/src/main/res/layout/fragment_transaction.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/sapan/Downloads/Book/app/src/main/res/layout/logo.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/sapan/Downloads/Book/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.4041666666666667" />
       </map>
     </option>
   </component>

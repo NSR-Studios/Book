@@ -1,23 +1,14 @@
 package com.example.book;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,18 +18,13 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.book.fragments.ComposeFragment;
+import com.example.book.fragments.PostsFragment;
 import com.example.book.fragments.ProfileFragment;
+import com.example.book.fragments.TransactionFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseFile;
-import com.parse.ParseQuery;
-import com.parse.ParseUser;
-import com.parse.SaveCallback;
 
 import java.io.File;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,8 +58,10 @@ public class MainActivity extends AppCompatActivity {
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#000000"));
         actionBar.setBackgroundDrawable(colorDrawable);
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.logo, null);
+        actionBar.setCustomView(view);
 
-        bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -83,14 +71,15 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.action_home:
                         //update fragment
                         Toast.makeText(MainActivity.this,"Home!",Toast.LENGTH_SHORT).show();
-                        //fragment = new PostsFragment();
-                        fragment = new ProfileFragment();
+                        fragment = new PostsFragment();
                         break;
                     case R.id.action_compose:
                         Toast.makeText(MainActivity.this,"Compose!",Toast.LENGTH_SHORT).show();
                         fragment = new ComposeFragment();
                         //fragment = new ProfileFragment();
                         break;
+                    case R.id.action_transaction:
+                        fragment = new TransactionFragment();
                     case R.id.action_profile:
                     default:
                         //update fragment
