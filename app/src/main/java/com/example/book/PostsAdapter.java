@@ -63,14 +63,14 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder>{
 
         public void bind(Post post) {
             //Bind the post data to the view elements
-            tvDescription.setText(post.getCondition());
-            tvUsername.setText(post.getUser().getUsername());
+            tvDescription.setText("$" + Integer.toString(post.getPrice()));
+            tvUsername.setText("Title");
             SimpleDateFormat DateFor1 = new SimpleDateFormat("dd/MM/yyyy");
             SimpleDateFormat DateTimeFor1 = new SimpleDateFormat("h:mm a");
             String stringDate1 = DateFor1.format(post.getCreated());
             String stringTime1 = DateTimeFor1.format(post.getCreated());
             String fullSent = "Created At: " + stringDate1 + " " + stringTime1;
-            tvTimeDate.setText(fullSent);
+            tvTimeDate.setText("ISBN: " + Integer.toString(post.getISBN()));
             ParseFile image = post.getFrontImage();
             if (image != null) {
                 Glide.with(context).load(image.getUrl()).into(ivImage);

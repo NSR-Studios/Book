@@ -19,8 +19,8 @@ public class Post extends ParseObject {
     public static final String KEY_CREATED_KEY = "createdAt";
     public static final String KEY_IMAGE = "ProfilePic";
 
-    public String getISBN() {
-        return getString(BOOK_NUMBER);
+    public int getISBN() {
+        return getInt(BOOK_NUMBER);
     }
 
     public void setISBN(int description){
@@ -40,8 +40,8 @@ public class Post extends ParseObject {
         return getParseFile(KEY_FRONT_IMAGE);
     }
 
-    public String getPrice() {
-        return getString(PRICE);
+    public int getPrice() {
+        return getInt(PRICE);
     }
 
     public void setPrice(int description){ put(PRICE,description); }

@@ -190,7 +190,7 @@ public class ProfileFragment extends Fragment {
                     Log.e(TAG,"Issue with getting posts",e);
                 }
                 for (Post post : posts) {
-                    Log.i(TAG,"Post: " + post.getCondition() + ", username: " + post.getUser().getUsername());
+                    Log.i(TAG,"Post: " + post.getCondition() + ", username: " + post.getUser().getUsername() +", price: " + Integer.toString(post.getPrice()) + " ISBN: " + Integer.toString(post.getISBN()));
                 }
                 allPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
