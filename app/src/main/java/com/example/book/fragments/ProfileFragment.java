@@ -89,7 +89,7 @@ public class ProfileFragment extends Fragment {
                 Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 photoFile = getPhotoFileUri("profile_pic.jpg");
 
-                Uri fileProvider = FileProvider.getUriForFile(getContext(), "com.codepath.fileprovider", photoFile);
+                Uri fileProvider = FileProvider.getUriForFile(getContext(), "com.codepath.fileprov", photoFile);
                 i.putExtra(MediaStore.EXTRA_OUTPUT, fileProvider);
 
                 startActivityForResult(i, 200);
