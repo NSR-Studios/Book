@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmTransaction">
+
+    <ImageView
+        android:id="@+id/imageCT"
+        android:layout_width="118dp"
+        android:layout_height="230dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="23dp"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/titleCT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="54dp"
+        android:layout_toEndOf="@+id/imageCT"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/categoryCT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleCT"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@+id/imageCT"
+        tools:text="Category" />
+
+    <TextView
+        android:id="@+id/conditionCT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categoryCT"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="23dp"
+        android:layout_toEndOf="@+id/imageCT"
+        tools:text="Condition" />
+
+    <TextView
+        android:id="@+id/priceCT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conditionCT"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="27dp"
+        android:layout_toEndOf="@+id/imageCT"
+        tools:text="Price" />
+
+    <ImageView
+        android:id="@+id/imageSellerCT"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/imageCT"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="false"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="103dp"
+        android:layout_marginTop="12dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/sellerCT"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageCT"
+        android:layout_alignParentLeft="false"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="34dp"
+        android:layout_toEndOf="@+id/imageSellerCT"
+        android:textStyle="bold"
+        tools:text="Seller" />
+
+    <ImageView
+        android:id="@+id/imageBuyerCT"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/priceCT"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="false"
+        android:layout_marginStart="193dp"
+        android:layout_marginLeft="103dp"
+        android:layout_marginTop="61dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/buyerCT"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/priceCT"
+        android:layout_alignParentLeft="false"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="89dp"
+        android:layout_toEndOf="@+id/imageBuyerCT"
+        android:textStyle="bold"
+        tools:text="Seller" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageBuyerCT"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="189dp"
+        android:minHeight="48dp"
+        android:spinnerMode="dialog"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="106dp"
+        android:ems="10"
+        android:hint="Enter Time"
+        android:inputType="time"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextDate2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:ems="10"
+        android:hint="Enter Date"
+        android:inputType="date"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/submitTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="141dp"
+        android:layout_marginBottom="34dp"
+        android:text="Submit" />
+
+</RelativeLayout>
