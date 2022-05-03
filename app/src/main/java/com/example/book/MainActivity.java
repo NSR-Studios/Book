@@ -79,7 +79,9 @@ public class MainActivity extends AppCompatActivity {
                         //fragment = new ProfileFragment();
                         break;
                     case R.id.action_transaction:
+                        Toast.makeText(MainActivity.this,"Transaction!",Toast.LENGTH_SHORT).show();
                         fragment = new TransactionFragment();
+                        break;
                     case R.id.action_profile:
                     default:
                         //update fragment
