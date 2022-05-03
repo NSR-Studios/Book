@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/cover2"
+            android:layout_width="131dp"
+            android:layout_height="216dp"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <RelativeLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="201dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:textColor="#FEFEFF"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="150dp"
+                tools:layout_editor_absoluteX="164dp"
+                tools:layout_editor_absoluteY="0dp"
+                tools:text="bob" />
+
+            <TextView
+                android:id="@+id/tvUser2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="26dp"
+                android:textColor="#FBFBFB"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="150dp"
+                tools:layout_editor_absoluteX="164dp"
+                tools:layout_editor_absoluteY="0dp"
+                tools:text="bob" />
+
+            <TextView
+                android:id="@+id/tvBookTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="-1dp"
+                android:layout_marginTop="49dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:layout_conversion_absoluteHeight="30dp"
+                tools:layout_conversion_absoluteWidth="100dp"
+                tools:layout_editor_absoluteX="164dp"
+                tools:layout_editor_absoluteY="19dp"
+                tools:text="rahul" />
+
+            <TextView
+                android:id="@+id/tvISBN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="79dp"
+                android:textColor="#FFFFFF"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="100dp"
+                tools:layout_editor_absoluteX="164dp"
+                tools:layout_editor_absoluteY="49dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#FDFDFD"
+            tools:text="trying to look hipster" />
+
+    </LinearLayout>
+
+</LinearLayout>
