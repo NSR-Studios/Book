@@ -12,8 +12,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +26,6 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.bumptech.glide.Glide;
 import com.example.book.EndlessRecyclerViewScrollListener;
-import com.example.book.LoginActivity;
 import com.example.book.Post;
 import com.example.book.PostsAdapter;
 import com.example.book.R;
@@ -52,8 +49,6 @@ public class ProfileFragment extends Fragment {
     PostsAdapter adapter;
     SwipeRefreshLayout refreshLayout;
     EndlessRecyclerViewScrollListener scrolling;
-    Button EditMe;
-    Button Logout;
 
 
     @Override
@@ -72,80 +67,12 @@ public class ProfileFragment extends Fragment {
         TextView username = view.findViewById(R.id.profile_username);
         username.setText("" + ParseUser.getCurrentUser().getUsername());
 
-
         //Set up major and class of
         TextView major = view.findViewById(R.id.profile_major);
-        //ParseUser.getCurrentUser().put("Major","Computer Science");
-        if ((ParseUser.getCurrentUser().getString("Major")) == null) {
-            major.setText("Major: ");
-        }
-        else {
-            major.setText(" " +ParseUser.getCurrentUser().getString("Major"));
-        }
-        EditText majorEdit = view.findViewById(R.id.profile_editMajor);
-        EditText classEdit = view.findViewById(R.id.profile_editClass);
-        //classEdit.setText("Edit Class");
+        major.setText("Major: Computer Science CS"); //+ParseUser.getCurrentUser().getMajor());
         TextView classOf = view.findViewById(R.id.profile_classOf);
-        //ParseUser.getCurrentUser().put("ClassOf"," CS113");
-        if (ParseUser.getCurrentUser().getString("ClassOf") == null) {
-            classOf.setText("Class of: ");
-        }
-        else {
-            classOf.setText(" " + ParseUser.getCurrentUser().getString("ClassOf"));
-        }
+        classOf.setText("Class of 22 - CS 113 Java"); //+ParseUser.getCurrentUser().getClass());
 
-        EditMe = view.findViewById(R.id.buttonEdit);
-        Logout = view.findViewById(R.id.buttonLogout);
-        EditMe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "Button Clicked!", Toast.LENGTH_SHORT).show();
-                majorEdit.setEnabled(true);
-                majorEdit.requestFocus();
-                String textMe = "" + majorEdit.getText();
-
-                if(majorEdit.getText().toString().isEmpty()) {
-                    // editText is empty
-                } else {
-                    // editText is not empty
-                    ParseUser.getCurrentUser().put("Major",textMe);
-                }
-                //ParseUser.getCurrentUser().put("Major",textMe);
-                major.setText(" " +ParseUser.getCurrentUser().getString("Major"));
-
-                classEdit.setEnabled(true);
-                classEdit.requestFocus();
-                String textMe2 = "" + classEdit.getText();
-
-                if(classEdit.getText().toString().isEmpty()) {
-                    // editText is empty
-                } else {
-                    // editText is not empty
-                    ParseUser.getCurrentUser().put("ClassOf",textMe2);
-                }
-                //ParseUser.getCurrentUser().put("ClassOf",textMe2);
-                classOf.setText(" " +ParseUser.getCurrentUser().getString("ClassOf"));
-
-
-                try {
-                    ParseUser.getCurrentUser().save();
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        });
-
-        Logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Toast.makeText(this,"Logout!", Toast.LENGTH_SHORT).show();
-                ParseUser.logOut();
-                ParseUser currentUser = ParseUser.getCurrentUser();
-                Intent iTwo = new Intent(getContext(), LoginActivity.class);
-                startActivity(iTwo);
-            }
-        });
         // Set up the password
         ParseFile image = ParseUser.getCurrentUser().getParseFile("ProfilePic");
         profilePic = view.findViewById(R.id.profile_pic);
@@ -177,14 +104,14 @@ public class ProfileFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
 
         // When we scroll, get the next page
-        /*scrolling = new EndlessRecyclerViewScrollListener(linearLayoutManager) {
+        scrolling = new EndlessRecyclerViewScrollListener(linearLayoutManager) {
             @Override
             public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
                 queryPosts();
             }
-        };*/
+        };
 
-        //rvPosts.addOnScrollListener(scrolling);
+        rvPosts.addOnScrollListener(scrolling);
 
         adapter = new PostsAdapter(view.getContext(), allPosts);
         rvPosts.setAdapter(adapter);
@@ -263,7 +190,7 @@ public class ProfileFragment extends Fragment {
                     Log.e(TAG,"Issue with getting posts",e);
                 }
                 for (Post post : posts) {
-                    Log.i(TAG,"Post: " + post.getCondition() + ", username: " + post.getUser().getUsername() +", price: " + post.getPrice() + " ISBN: " + post.getISBN());
+                    Log.i(TAG,"Post: " + post.getCondition() + ", username: " + post.getUser().getUsername() +", price: " + Integer.toString(post.getPrice()) + " ISBN: " + Integer.toString(post.getISBN()));
                 }
                 allPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
