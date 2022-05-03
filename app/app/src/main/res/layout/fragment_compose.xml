@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="733dp"
+        android:background="#000000"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="101dp"
+            android:layout_marginTop="8dp"
+            android:text="Book ISBN number:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ISBN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="#262626"
+            android:ems="10"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="88dp"
+            android:text="Condition:"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#F6F6F6"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Condition"
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="113dp"
+            android:layout_marginEnd="10dp"
+            android:background="#262626"
+            android:ems="10"
+            android:hint="old, new, used etc. "
+            android:importantForAutofill="no"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#F6F6F6"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="223dp"
+            android:layout_marginTop="87dp"
+            android:text="Price:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Price"
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="223dp"
+            android:layout_marginTop="113dp"
+            android:layout_marginEnd="10dp"
+            android:background="#262626"
+            android:ems="10"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/BackCover"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="499dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/ivBackImage"
+            android:backgroundTint="#D22630"
+            android:padding="10dp"
+            android:text="BackCover"
+            android:textColor="#071D49" />
+
+        <ImageView
+            android:id="@+id/ivFrontImage"
+            android:layout_width="208dp"
+            android:layout_height="211dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="192dp"
+            tools:ignore="ImageContrastCheck"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/ivBackImage"
+            android:layout_width="208dp"
+            android:layout_height="211dp"
+            android:layout_below="@+id/ivFrontImage"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="30dp"
+            tools:src="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/FrontCover"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="277dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/ivFrontImage"
+            android:backgroundTint="#D22630"
+            android:padding="10dp"
+            android:text="FrontCover"
+            android:textColor="#071D49" />
+
+        <Button
+            android:id="@+id/Submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivBackImage"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="94dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#D22630"
+            android:padding="10dp"
+            android:text="Submit"
+            android:textColor="#071D49" />
+
+
+    </RelativeLayout>
+</ScrollView>
